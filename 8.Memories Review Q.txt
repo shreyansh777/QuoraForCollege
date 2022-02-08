@@ -1,0 +1,17 @@
+Backend
+
+body-parser  -> Enable us to send POST request 
+cors -> enable cross origin request
+express -> framework for creating routing of application
+mongoose -> To create Model for our posts
+nodemon -> automatically updates the changes
+
+Frontend
+
+axios -> for calling the API
+moment -> gives time and date
+react-file-base64 -> 
+
+WHOLE SEARCH AND TAGS NOT WORKING
+Q - Images doesnt show after searching with tag
+Q - Seach memories not happening
