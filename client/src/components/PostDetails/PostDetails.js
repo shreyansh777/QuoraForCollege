@@ -59,46 +59,44 @@ const PostDetails = () => {
           <Typography gutterBottom variant="body1" component="p">
             {post.message}
           </Typography>
-          <Typography variant="h6">Created by: {post.name}</Typography>
-          <Typography variant="body1">
+          <Typography variant="h6">Asked by: {post.name}</Typography>
+          <Typography variant="body3">
             {moment(post.createdAt).fromNow()}
           </Typography>
-          <Divider style={{ margin: "20px 0" }} />
-          <Typography variant="body1">
+          {/* <Divider style={{ margin: "20px 0" }} /> */}
+          {/* <Typography variant="body1">
             <strong>Realtime Chat - coming soon!</strong>
-          </Typography>
+          </Typography> */}
           <Divider style={{ margin: "20px 0" }} />
-          <CommentSection post={post} />      //Comments
+          <CommentSection post={post} />
           <Divider style={{ margin: "20px 0" }} />
         </div>
         <div className={classes.imageSection}>
-          <img
-            className={classes.media}
-            src={
-              post.selectedFile ||
-              "https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png"
-            }
-            alt={post.title}
-          />
+          <img className={classes.media} src={post.selectedFile} alt="" />
         </div>
       </div>
       {!!recommendedPosts.length && (
         <div className={classes.section}>
           <Typography gutterBottom variant="h5">
-            You might also like:
+            Want to Gain more Knowledge:
           </Typography>
           <Divider />
           <div className={classes.recommendedPosts}>
             {recommendedPosts.map(
               ({ title, name, message, likes, selectedFile, _id }) => (
                 <div
-                  style={{ margin: "20px", cursor: "pointer" }}
+                  style={{
+                    margin: "20px",
+                    cursor: "pointer",
+                    border: "groove",
+                  }}
                   onClick={() => openPost(_id)}
                   key={_id}
                 >
                   <Typography gutterBottom variant="h6">
                     {title}
                   </Typography>
+
                   <Typography gutterBottom variant="subtitle2">
                     {name}
                   </Typography>

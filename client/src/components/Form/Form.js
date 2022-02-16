@@ -23,6 +23,7 @@ function Form({ currentId, setCurrentId }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    //Updating a post
     if (post) setPostData(post);
   }, [post]);
 
@@ -44,7 +45,7 @@ function Form({ currentId, setCurrentId }) {
     return (
       <Paper className={classes.paper} elevation={6}>
         <Typography variant="h6" align="center">
-          Please Sign In to create your own memories and like other's memories.
+          Please Sign In to ask Question's and Solve other questions.
         </Typography>
       </Paper>
     );
@@ -69,7 +70,7 @@ function Form({ currentId, setCurrentId }) {
         onSubmit={handleSubmit}
       >
         <Typography variant="h6">
-          {currentId ? `Editing "${post.title}"` : "Creating a Memory"}
+          {currentId ? `Editing Question` : "Ask Question's"}
         </Typography>
         {/* <TextField
           name="creater"
@@ -85,7 +86,7 @@ function Form({ currentId, setCurrentId }) {
         <TextField
           name="title"
           variant="outlined"
-          label="Title"
+          label="Question Heading"
           fullWidth
           value={postData.title}
           onChange={(e) => setPostData({ ...postData, title: e.target.value })}
@@ -93,7 +94,7 @@ function Form({ currentId, setCurrentId }) {
         <TextField
           name="message"
           variant="outlined"
-          label="Message"
+          label="Question Description"
           fullWidth
           rows={4}
           value={postData.message}
@@ -115,6 +116,7 @@ function Form({ currentId, setCurrentId }) {
           <FileBase64
             type="file"
             multiple={false}
+            label="Attach Photo if any"
             onDone={({ base64 }) =>
               setPostData({ ...postData, selectedFile: base64 })
             }

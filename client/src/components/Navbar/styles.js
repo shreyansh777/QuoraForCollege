@@ -31,23 +31,37 @@ export default makeStyles((theme) => ({
   profile: {
     display: "flex",
     justifyContent: "space-between",
-    width: "400px",
+    width: "300px",
     alignItems: "center",
   },
   logout: {
     marginLeft: "20px",
+    width: "80px",
   },
   userName: {
     display: "flex",
     alignItems: "center",
     textAlign: "center",
+    justifyContent: "space-between",
+    //width: "260",
+    marginLeft: "10px",
   },
   brandContainer: {
     display: "flex",
     alignItems: "center",
+    textDecoration: "none",
   },
   purple: {
     color: deepPurple[100],
     backgroundColor: deepPurple[500],
+    //width: "40px",
+  },
+  titleDesign: {
+    //textDecoration: "underline",
+  },
+  combine: {
+    display: "flex",
+    justifyContent: "flex-start",
+    //width: "200px",
   },
 }));
